@@ -25,6 +25,7 @@ HashTable::HashTable(int newCap)
 	: capacity(newCap)
 {
 	numOfElements = 0;
+
 	table = new int[capacity];
 	for (int i = 0; i < capacity; ++i)
 		table[i] = -1;
