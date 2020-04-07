@@ -26,7 +26,7 @@ public:
 	HashTable(const HashTable& other);
 
 	// move constructor
-	HashTable(const HashTable&& other);
+	HashTable(HashTable&& other);
 
 	// insert
 	void insert(int key);
@@ -35,7 +35,7 @@ public:
 	HashTable& operator=(const HashTable& rhs);
 
 	// move assignment operator
-	HashTable& operator=(const HashTable&& rhs);
+	HashTable& operator=(HashTable&& rhs);
 
 	// search
 	bool search(int key) const;
@@ -44,7 +44,7 @@ public:
 	int getCapacity() const;
 
 	// subscript operator
-	int& operator[](int key);
+	int& operator[](int idx) const;
 
 	// emptyTable
 	void emptyTable();
@@ -54,7 +54,7 @@ public:
 
 private:
 	// hashValue
-	int hashValue(int j, int key);
+	int hashValue(int j, int key) const;
 	
 	int *table;							//pointer to the hash table
     int numOfElements;					//number of items in the hash table

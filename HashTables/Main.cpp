@@ -93,7 +93,6 @@ void test_3(const vector<int>& data)
 void test_4(const vector<int>& data)
 {
 	// TEST: move constructor, insert
-	cout << "TEST: move constructor, insert\n";
 	cout << "\nCreate and insert data into ht...\n";
 	HashTable ht(19);
 	for (const int& i : data)
@@ -132,15 +131,16 @@ void test_5(const vector<int>& data)
 	printTable(ht);
 	cout << "Print htCopy...\n";
 	printTable(htCopy);
+	cout << "\n----------------------------------------------------\n";
 }
 
 void test_6(const vector<int>& data)
 {
 	// TEST: move assignment operator
 	HashTable ht, htCopy(19);
-	cout << "\nInsert the data into ht...";
+	cout << "\nInsert the data into htCopy...";
 	for (const int& i : data)
-	htCopy.insert(i);
+		htCopy.insert(i);
 	cout << "Print ht...\n";
 	printTable(ht);
 	cout << "Print htCopy...\n";
